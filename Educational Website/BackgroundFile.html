@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <h2>Data Displayed</h2>
+  <p id="demo"></p>
+
+  <script>
+    const xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onload = function () {
+      const myObj = JSON.parse(this.responseText);
+      a = document.getElementById("demo").innerHTML = myObj.name;
+      alert(a);
+    }
+    xmlhttp.open("GET", "BackgroundFile.php");
+    xmlhttp.send();
+  </script>
+
+</body>
+
+</html>
+
 
